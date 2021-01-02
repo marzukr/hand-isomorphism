@@ -13,6 +13,7 @@
 
 #include <inttypes.h>
 #include <stddef.h>
+#include <stdbool.h>
 #include "deck.h"
 
 #define MAX_ROUNDS           8
