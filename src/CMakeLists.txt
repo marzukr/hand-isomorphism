@@ -9,3 +9,6 @@ add_library(
     )
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY C_STANDARD 99)
+get_target_property(target_options ${PROJECT_NAME} COMPILE_OPTIONS)
+list(REMOVE_ITEM target_options "-Werror")
+set_property(TARGET ${PROJECT_NAME} PROPERTY COMPILE_OPTIONS ${target_options})
