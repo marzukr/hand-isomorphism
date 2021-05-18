@@ -1,5 +1,5 @@
 add_library(
-    ${PROJECT_NAME} SHARED
+    handisomorphism SHARED
     check-main.c
     deck.c
     deck.h
@@ -8,7 +8,7 @@ add_library(
     hand_index.h
     )
 
-set_property(TARGET ${PROJECT_NAME} PROPERTY C_STANDARD 99)
-get_target_property(target_options ${PROJECT_NAME} COMPILE_OPTIONS)
+set_property(TARGET handisomorphism PROPERTY C_STANDARD 99)
+get_target_property(target_options handisomorphism COMPILE_OPTIONS)
 list(REMOVE_ITEM target_options "-Werror")
-set_property(TARGET ${PROJECT_NAME} PROPERTY COMPILE_OPTIONS ${target_options})
+set_property(TARGET handisomorphism PROPERTY COMPILE_OPTIONS ${target_options})
