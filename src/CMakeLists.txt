@@ -9,6 +9,4 @@ add_library(
     )
 
 set_property(TARGET handisomorphism PROPERTY C_STANDARD 99)
-get_target_property(target_options handisomorphism COMPILE_OPTIONS)
-list(REMOVE_ITEM target_options "-Werror")
-set_property(TARGET handisomorphism PROPERTY COMPILE_OPTIONS ${target_options})
+set_target_properties(handisomorphism PROPERTIES COMPILE_FLAGS "-w")
